@@ -10,7 +10,7 @@ import { useLazyQuery } from '@apollo/react-hooks';
 import { useSelector, useDispatch } from 'react-redux';
 import './style.css';
 
-const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
+const stripePromise = loadStripe('redux-store');
 
 const Cart = () => {
     // const [state, dispatch] = useStoreContext();
