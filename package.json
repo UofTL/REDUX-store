@@ -1,7 +1,7 @@
 {
     "name": "redux-store",
     "version": "1.0.0",
-    "description": "we are building online shop with REDUX payement",
+    "description": "we are building online shop with REDUX payment",
     "main": "index.js",
     "scripts": {
         "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",

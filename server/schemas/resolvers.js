@@ -1,7 +1,7 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { User, Product, Category, Order } = require('../models');
 const { signToken } = require('../utils/auth');
-const stripe = require('stripe')('redux-store');
+const stripe = require('stripe')('sk_test_51JvPCdChVrEyKIi90FKIA2R6cjc6CcZGXDD7GmT17FxtrYzILdRmBf2L4sc9akz5JJqBUYnV3m6vohx669vfRwuP00ClrBjC7d');
 
 const resolvers = {
   Query: {
@@ -65,7 +65,7 @@ const resolvers = {
           description: products[i].description,
           images: [`${url}/images/${products[i].image}`]
         });
-
+console.log ("stripe object",product)
         // generate price id using the product id
         const price = await stripe.prices.create({
           product: product.id,

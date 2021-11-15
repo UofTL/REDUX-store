@@ -10,7 +10,7 @@ import { useLazyQuery } from '@apollo/react-hooks';
 import { useSelector, useDispatch } from 'react-redux';
 import './style.css';
 
-const stripePromise = loadStripe('redux-store');
+const stripePromise = loadStripe('pk_test_51JvPCdChVrEyKIi9ABEjQeP3iXM9AbLTfu6ke9rvdfwPQSk0Kb3bZcedfb7XeGKSSi8gll7kmMNn6POnK7S2Yzvz00BBOHtOpo');
 
 const Cart = () => {
     // const [state, dispatch] = useStoreContext();
@@ -53,7 +53,7 @@ const Cart = () => {
 
       function submitCheckout() {
         const productIds = [];
-      
+      console.log ("test",state)
         state.cart.forEach((item) => {
           for (let i = 0; i < item.purchaseQuantity; i++) {
             productIds.push(item._id);
